@@ -1,11 +1,22 @@
-function createStore() {
+import reducer from "./reducer";
+
+function createStore(reducer) {
   let state;
+
+  function dispatch(action) {
+    // Call reducer to get the new state
+    state = reducer(state, action);
+    // Notify the subscribers
+  }
 
   function getState() {
     return state;
   }
 
   return {
+    dispatch,
     getState,
   };
 }
+
+export default createStore(reducer);
