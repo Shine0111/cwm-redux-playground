@@ -15,5 +15,6 @@ const slice = createSlice({
   },
 });
 
+// export the actions and the reducer
 export const { projectAdded } = slice.actions;
 export default slice.reducer;
