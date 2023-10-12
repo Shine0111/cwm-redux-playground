@@ -12,6 +12,6 @@ store.subscribe(() => {
 // store.dispatch(actions.bugAdded({ description: "Bug2" }));
 // store.dispatch(actions.bugAdded({ description: "Bug3" }));
 // store.dispatch(actions.bugResolved({ id: 1 }));
-store.dispatch(actions.projectAdded({ description: "Project 1" }));
+store.dispatch(actions.projectAdded({ name: "Project 1" }));
 
 console.log(store.getState());

@@ -9,8 +9,7 @@ const slice = createSlice({
     projectAdded: (projects, action) => {
       projects.push({
         id: ++lastId,
-        description: action.payload.description,
-        resolved: false,
+        name: action.payload.name,
       });
     },
   },
